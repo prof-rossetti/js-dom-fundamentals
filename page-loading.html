@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Loading Considerations | JavaScript Fundamentals</title>
+
+    <script type="text/javascript">
+      console.log("HEAD")
+      var message = document.getElementById("my-message").innerHTML
+      console.log("HEAD", message)
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      console.log("TOP OF BODY")
+      var message = document.getElementById("my-message").innerHTML
+      console.log("TOP OF BODY", message)
+    </script>
+
+    <div id="my-container">
+      <p id="my-message">Hello World!</p>
+    </div>
+
+    <script type="text/javascript">
+      console.log("BOTTOM OF BODY")
+      var message = document.getElementById("my-message").innerHTML
+      console.log("BOTTOM OF BODY", message)
+    </script>
+  </body>
+</html>
