@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Selections | JavaScript Fundamentals</title>
+  </head>
+  <body>
+
+    <div id="my-container">
+      <h1>Selections</h1>
+
+      <p id="my-paragraph">Hello World</p>
+
+      <button id="my-button" type="button" name="button">Click Me!</button>
+
+      <select id="animal-selector">
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+        <option value="lion">Lion</option>
+      </select>
+    </div>
+
+    <script type="text/javascript">
+
+      //
+      // VANILLA JAVASCRIPT
+      //
+
+      var animalSelector = document.getElementById("animal-selector")
+
+      animalSelector.addEventListener("change", selectAnimal, false);
+
+      function selectAnimal(){
+        var selectedAnimal = animalSelector.value;
+        console.log(selectedAnimal)
+      }
+
+    </script>
+  </body>
+</html>
