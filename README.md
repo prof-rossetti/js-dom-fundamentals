@@ -1,20 +1,14 @@
-# JavaScript Fundamentals
+# JavaScript DOM Fundamentals
 
-This repository contains examples of how to use JavaScript in client-side development.
-
-View live at _______________.
-
-## Learning
-
-Navigate to the various pages and use your web browser's "inspect" functionality to view the "console", where you should see relevant messages to illustrate various concepts.
+View live at https://prof-rossetti.github.io/js-dom-fundamentals/.
 
 ## Contributing
 
 Download the source code:
 
 ```` sh
-git clone git@github.com:prof-rossetti/js-fundamentals.git
-cd js-fundamentals/
+git clone git@github.com:prof-rossetti/js-dom-fundamentals.git
+cd js-dom-fundamentals/
 ````
 
 Run a local web server:
@@ -26,3 +20,7 @@ python -m SimpleHTTPServer 8888
 # Windows Command Prompt:
 python –m http.server 8888
 ````
+
+## LiCENSE
+
+MIT
