@@ -21,35 +21,57 @@
     <script type="text/javascript">
 
       var myCourse = {name:"Internet Programming", day:"Thursday", start_time:"7:05pm", end_time:"10:05pm"}
-      
+
       //
       // VANILLA JAVASCRIPT
       //
 
-      // var myDiv = document.getElementById("my-container")
+      /*
 
-      // var myP = document.getElementById("my-message")
+      var myDiv = document.getElementById("my-container")
 
-      // myP.innerHTML = "Fun times"
+      var myP = document.getElementById("my-message")
 
-      // myDiv.removeChild(myP)
+      myP.innerHTML = "Fun times"
 
-      // myDiv.appendChild(myP)
+      myDiv.removeChild(myP)
 
-      // myDiv.removeChild(myP)
+      myDiv.appendChild(myP)
 
-      // var myHeading = document.createElement("h3")
+      myDiv.removeChild(myP)
 
-      // myHeading.innerHTML = myCourse["name"]
+      var myHeading = document.createElement("h3")
 
-      // myDiv.appendChild(myHeading)
+      myHeading.innerHTML = myCourse["name"]
 
+      myDiv.appendChild(myHeading)
+
+      */
 
 
       //
       // JQUERY
       //
 
+      /*
+
+      var myDiv = $("#my-container")
+
+      var myP = $("#my-message")
+
+      myP.text("Fun times!") // http://api.jquery.com/text/ ... https://www.w3schools.com/jquery/html_text.asp
+
+      myP.remove()
+
+      myDiv.append(myP) // http://api.jquery.com/append/
+
+      var secondP = myDiv.append("<p>Fun times</p>")
+
+      secondP.remove()
+
+      var myHeading = myDiv.append("<h3>" + myCourse["name"] + "</h3>")
+
+      */
 
       //
       // D3
