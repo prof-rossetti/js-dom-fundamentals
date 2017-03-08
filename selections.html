@@ -9,6 +9,17 @@
     <div id="my-container">
       <h1>Selections</h1>
 
+      <div id="instructions">
+        <h2>Objectives</h2>
+        <p class="lead">Satisfy the following objectives, first using vanilla <code>JavaScript</code>, then using <code>jQuery</code>, then using <code>d3</code>.</p>
+        <ol>
+          <li>For each element existing below the <code>hr</code> element, programmatically select it and inspect its HTML contents.</li>
+          <li>Select all child elements belonging to the <code>select#animal-selector</code> element.</li>
+        </ol>
+      </div>
+
+      <hr>
+
       <p id="my-paragraph">Hello World</p>
 
       <button id="my-button" type="button" name="button">Click Me!</button>
@@ -32,31 +43,57 @@
       // VANILLA JAVASCRIPT
       //
 
+      /*
+
       var myParagraph = document.getElementById("my-paragraph")
 
       var myButton = document.getElementById("my-button")
 
       var animalSelector = document.getElementById("animal-selector")
 
+      animalSelector.children
+
+      */
+
+
       //
       // JQUERY
       //
 
-      var myParagraph2 = $("#my-paragraph")
+      /*
 
-      var myButton2 = $("#my-button")
+      var myParagraph = $("#my-paragraph")
 
-      var animalSelector2 = $("#animal-selector")
+      var myButton = $("#my-button")
+
+      var animalSelector = $("#animal-selector")
+
+      animalSelector.children()
+
+      */
+
 
       //
       // D3
       //
 
-      var myParagraph3 = d3.select("my-paragraph")
+      /*
 
-      var myButton3 = d3.select("my-button")
+      var myParagraph = d3.select("#my-paragraph")
 
-      var animalSelector3 = d3.select("animal-selector")
+      myParagraph.node()
+
+      var myButton = d3.select("#my-button")
+
+      myButton.node()
+
+      var animalSelector = d3.select("#animal-selector")
+
+      animalSelector.node()
+
+      animalSelector.node().children
+
+      */
 
     </script>
   </body>

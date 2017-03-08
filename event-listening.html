@@ -9,6 +9,17 @@
     <div id="my-container">
       <h1>Event-listening</h1>
 
+      <div id="instructions">
+        <h2>Objectives</h2>
+        <p class="lead">Satisfy the following objectives, first using vanilla <code>JavaScript</code>, then using <code>jQuery</code>, then using <code>d3</code>.</p>
+        <ol>
+          <li>Log a message or display an alert any time the <code>button#my-button</code> element is clicked.</li>
+          <li>Log a message or display an alert any time the <code>select#animal-selector</code> element is changed. Include the name of the currently-selected animal in the contents of the message/alert.</li>
+        </ol>
+      </div>
+
+      <hr>
+
       <p id="my-paragraph">Hello World</p>
 
       <button id="my-button" type="button" name="button">Click Me!</button>
@@ -20,7 +31,17 @@
       </select>
     </div>
 
+    <!-- LOAD JQUERY LIBRARY -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <!-- LOAD D3 LIBRARY -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
     <script type="text/javascript">
+
+      function displayAlertMessage(){
+        alert("YOU CLICKED THE BUTTON!")
+      }
 
       //
       // VANILLA JAVASCRIPT
@@ -28,14 +49,63 @@
 
       /*
 
+      var myBtn = document.getElementById("my-button")
+
+      myBtn.addEventListener("click", displayAlertMessage, false)
+
       var animalSelector = document.getElementById("animal-selector")
 
-      animalSelector.addEventListener("change", selectAnimal, false);
-
-      function selectAnimal(){
+      function logSelectedAnimal(){
         var selectedAnimal = animalSelector.value;
         console.log(selectedAnimal)
       }
+
+      animalSelector.addEventListener("change", logSelectedAnimal, false)
+
+      */
+
+
+      //
+      // JQUERY
+      //
+
+      /*
+
+      var myBtn = $("#my-button")
+
+      myBtn.on("click", displayAlertMessage)
+
+      var animalSelector = $("#animal-selector")
+
+      function logSelectedAnimal(){
+        var selectedAnimal = animalSelector.val()
+        console.log(selectedAnimal)
+      }
+
+      animalSelector.on("change", logSelectedAnimal)
+
+      */
+
+
+      //
+      // D3
+      //
+
+      /*
+
+      var myParagraph = d3.select("#my-paragraph")
+
+      myParagraph.node()
+
+      var myButton = d3.select("#my-button")
+
+      myButton.node()
+
+      var animalSelector = d3.select("#animal-selector")
+
+      animalSelector.node()
+
+      animalSelector.node().children
 
       */
 
