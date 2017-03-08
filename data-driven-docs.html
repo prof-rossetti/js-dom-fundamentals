@@ -9,19 +9,20 @@
 
     <div id="instructions">
       <h2>Objectives</h2>
-      <p class="lead">Satisfy the following objectives, first using vanilla JavaScript, then using jQuery, then using d3.</p>
+      <p class="lead">Satisfy the following objectives, first using vanilla <code>JavaScript</code>, then using <code>jQuery</code>, then using <code>d3</code>.</p>
       <ol>
-        <li>Change the placeholder text inside the <code>p#my-message</code> element from "Some placeholder content." to "My New Content!".</li>
+        <li>Change the placeholder text inside the <code>p#my-message</code> element from "Some placeholder content." to "Fun times!".</li>
         <li>Remove the <code>p#my-message</code> element from the page altogether.</li>
         <li>Add an <code>h3</code> element nested inside the <code>div#my-container</code> element to display the name of the course.</li>
         <li>Add other elements as desired nested inside the <code>div#my-container</code> to display all information about the course.</li>
       </ol>
     </div>
 
+    <hr>
+
     <div id="my-container">
       <p id="my-message">Some placeholder content.</p>
     </div>
-
 
     <!-- LOAD JQUERY LIBRARY -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -84,11 +85,38 @@
 
       */
 
+
       //
       // D3
       //
 
+      /*
 
+      var myP = d3.select("#my-message")
+
+      myP.node()
+
+      myP.text("Fun times!")
+
+      myP.node().innerHTML = "Even more fun."
+
+      myP.remove()
+
+      var myDiv = d3.select("#my-container")
+
+      myDiv.node()
+
+      var myHeading = myDiv.append("h2")
+
+      myDiv.node()
+
+      myHeading.text("Internet Programming")
+
+      myHeading.attr("id", "course-title")
+
+      myHeading.style("color", "red")
+
+      */
 
     </script>
   </body>
