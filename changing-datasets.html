@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Changing Datasets | JavaScript DOM Fundamentals</title>
+  </head>
+  <body>
+    <h1><a href="index.html">JavaScript DOM Fundamentals</a></h1>
+
+    <nav>
+      <ul>
+        <li><a href="page-loading.html">Page-loading Considerations</a></li>
+        <li><a href="selections.html">Selections</a></li>
+        <li><a href="event-listening.html">Event-listening</a></li>
+        <li><a href="dom-manipulation.html">DOM Manipulation</a></li>
+        <li><a href="data-driven-docs.html">Data-driven Documents</a></li>
+        <li><a href="changing-datasets.html">Changing Datasets</a></li>
+      </ul>
+    </nav>
+
+    <h2>Changing Datasets</h2>
+
+    <div id="instructions">
+      <h3>Objectives</h3>
+      <p class="lead">Satisfy the following objectives using vanilla <code>JavaScript</code>:</p>
+      <ol>
+        <li>Add an <code>a</code> element, nested inside an <code>h3</code> element, nested inside the <code>div#my-container</code> element.</li>
+        <li>Configure the text of the <code>a</code> element to display the name of the course (<code>myCourse</code>).</li>
+        <li>Configure the <code>a</code> element's <code>href</code> attribute to hyperlink to the course link (<code>myCourse</code>).</li>
+        <li>Configure the `select#course-selector` element such that when it's value is changed, the proper course is displayed (<code>myCourse</code> vs <code>otherCourse</code>).</li>
+      </ol>
+    </div>
+
+    <hr id="divider">
+
+
+
+
+
+
+    <select id="course-selector">
+      <option value="443">Internet Programming</option>
+      <option value="335">Database Management Systems Design</option>
+    </select>
+
+    <div id="my-container">
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <hr>
+    <footer>
+      <p>
+        <a href="https://prof-rossetti.github.io/js-dom-fundamentals/">view</a> |
+        <a href="https://github.com/prof-rossetti/js-dom-fundamentals">source</a>
+      </p>
+    </footer>
+
+    <script type="text/javascript">
+
+      var myCourse = {name:"Internet Programming", url:"http://catalog.southernct.edu/undergraduate/courses/csc443.html"}
+
+      var otherCourse = {name:"Database Management Systems Design", url:"http://catalog.southernct.edu/undergraduate/courses/csc335.html"}
+
+      // MANIPULATE THE DOM HERE!
+
+
+    </script>
+  </body>
+</html>
