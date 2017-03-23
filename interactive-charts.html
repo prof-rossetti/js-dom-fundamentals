@@ -25,13 +25,14 @@
 
       function selectYear() {
         console.log("SELECTED YEAR:", yearSelector.value)
+        makeMyChart()
+        // we could pass the year into the makeMyChart() function, like makeMyChart(yearSelector.value)
+        // ... but we will instead just invoke the function witout passing a parameter...
+        // ... and we will get the currently selected year from within the makeMyChart() function
+        // ... we could do it either way.
       }
 
       yearSelector.addEventListener("change", selectYear, false)
-
-
-
-
 
       // MAKE A CHART HERE
 
@@ -55,6 +56,8 @@
       }
 
       function makeMyChart() {
+        var selectedYear = yearSelector.value
+
         var chartConfigurationOptions = {
           chart: {
             plotBackgroundColor: null,
@@ -63,7 +66,7 @@
             type: 'pie'
           },
           title: {
-            text: 'Browser market shares January, 2015 to May, 2015'
+            text: 'Browser market shares for ' + selectedYear + " (fake data)" // concatenating strings here
           },
           tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -85,7 +88,7 @@
             {
               name: 'Brands',
               colorByPoint: true,
-              data: browserShareByYear["2016"]
+              data: browserShareByYear[selectedYear]
            }
          ]
         }
