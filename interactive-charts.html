@@ -25,6 +25,15 @@
         {name: 'Proprietary or Undetectable', y: 0.2}
       ]
 
+      var otherDataSeries = [
+        {name: 'Microsoft Internet Explorer', y: 100},
+        {name: 'Chrome', y: 25},
+        {name: 'Firefox',y: 31},
+        {name: 'Safari', y: 8},
+        {name: 'Opera', y: 80},
+        {name: 'Proprietary or Undetectable', y: 3}
+      ] // PLEASE EXCUSE THE FAKE DATA FOR DEMONSTRATION PURPOSES :-)
+
       var chartConfigurationOptions = {
         chart: {
           plotBackgroundColor: null,
@@ -55,7 +64,7 @@
           {
             name: 'Brands',
             colorByPoint: true,
-            data: myDataSeries
+            data: otherDataSeries
          }
        ]
       }
