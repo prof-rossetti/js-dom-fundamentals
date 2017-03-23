@@ -16,23 +16,24 @@
 
       // MAKE A CHART HERE
 
-      var myDataSeries = [
-        {name: 'Microsoft Internet Explorer', y: 56.33},
-        {name: 'Chrome', y: 24.03},
-        {name: 'Firefox',y: 10.38},
-        {name: 'Safari', y: 4.77},
-        {name: 'Opera', y: 0.91},
-        {name: 'Proprietary or Undetectable', y: 0.2}
-      ]
-
-      var otherDataSeries = [
-        {name: 'Microsoft Internet Explorer', y: 100},
-        {name: 'Chrome', y: 25},
-        {name: 'Firefox',y: 31},
-        {name: 'Safari', y: 8},
-        {name: 'Opera', y: 80},
-        {name: 'Proprietary or Undetectable', y: 3}
-      ] // PLEASE EXCUSE THE FAKE DATA FOR DEMONSTRATION PURPOSES :-)
+      var browserShareByYear = {
+        "2015": [
+          {name: 'Microsoft Internet Explorer', y: 56.33},
+          {name: 'Chrome', y: 24.03},
+          {name: 'Firefox',y: 10.38},
+          {name: 'Safari', y: 4.77},
+          {name: 'Opera', y: 0.91},
+          {name: 'Proprietary or Undetectable', y: 0.2}
+        ],
+        "2016": [
+          {name: 'Microsoft Internet Explorer', y: 100},
+          {name: 'Chrome', y: 25},
+          {name: 'Firefox',y: 31},
+          {name: 'Safari', y: 8},
+          {name: 'Opera', y: 80},
+          {name: 'Proprietary or Undetectable', y: 3}
+        ]
+      }
 
       var chartConfigurationOptions = {
         chart: {
@@ -64,7 +65,7 @@
           {
             name: 'Brands',
             colorByPoint: true,
-            data: otherDataSeries
+            data: browserShareByYear["2016"]
          }
        ]
       }
