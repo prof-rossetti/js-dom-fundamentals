@@ -17,23 +17,53 @@
 
     <script type="text/javascript">
 
-      // FYI - the docs said something about styles but I couldn't figure it out at a glance, so skipping for now.
-      // it turns out we probably can use some example style
+      //
+      // RAW DATASET (TODO: PLOT THE COORDINATES OF EACH STATION ON A MAP)
+      //
 
-      // MY MAPBOX ACCESS TOKEN (PLEASE USE YOUR OWN!):
+      //var trainStops = [
+      //  {abbrev: "NHV", name: "New Haven Union Station", lat: 41.29771887088102, lon: -72.92673110961914, url: "http://www.shorelineeast.com/service_info/stations/nh_u.php"},
+      //  {abbrev: "ST", name: "New Haven State Street Station", lat: 41.3049849812806, lon: -72.92176365852356, url: "http://www.shorelineeast.com/service_info/stations/nh_s.php"},
+      //  {abbrev: "BRN", name: "Branford", lat: 41.27462757904543, lon: -72.81724601984024, url: "http://www.shorelineeast.com/service_info/stations/branford.php"},
+      //  {abbrev: "GUIL", name: "Guilford", lat: 41.275818924391224, lon: -72.6736432313919, url: "http://www.shorelineeast.com/service_info/stations/guilford.php"},
+      //  {abbrev: "MAD", name: "Madison", lat: 41.28366795570182, lon: -72.59953916072845, url: "http://www.shorelineeast.com/service_info/stations/madison.php"},
+      //  {abbrev: "CLIN", name: "Clinton", lat: 41.279485551365795, lon: -72.52829968929291, url: "http://www.shorelineeast.com/service_info/stations/clinton.php"},
+      //  {abbrev: "WES", name: "Westbrook", lat: 41.28876307212696, lon: -72.44840204715729, url: "http://www.shorelineeast.com/service_info/stations/westbrook.php"},
+      //  {abbrev: "OSB", name: "Old Saybrook", lat: 41.30039086249561, lon: -72.37682461738586, url: "http://www.shorelineeast.com/service_info/stations/old_saybrook.php"},
+      //  {abbrev: "NLC", name: "New London", lat: 41.354158032583534, lon: -72.0930764079094, url: "http://www.shorelineeast.com/service_info/stations/new_london.php"},
+      //  {abbrev: "GCS", name: "Grand Central Station", lat: 40.753165, lon: -73.977379, url: "http://as0.mta.info/mnr/stations/station_detail.cfm"},
+      //  {abbrev: "GW", name: "Greenwich", lat: 41.021705, lon: -73.624597, url: "http://as0.mta.info/mnr/stations/station_detail.cfm"},
+      //  {abbrev: "STM", name: "Stamford", lat: 41.04665375272103, lon: -73.54284524917603, url: "http://as0.mta.info/mnr/stations/station_detail.cfm?key=226"},
+      //  {abbrev: "SN", name: "South Norwalk", lat: 41.095529, lon: -73.421803, url: "http://as0.mta.info/mnr/stations/station_detail.cfm"},
+      //  {abbrev: "BRP", name: "Bridgeport", lat: 41.17870242332479, lon: -73.18707704544067, url: "http://as0.mta.info/mnr/stations/station_detail.cfm?key=246"},
+      //  {abbrev: "STR", name: "Stratford", lat: 41.19428563274378, lon: -73.13156604766846, url: "http://as0.mta.info/mnr/stations/station_detail.cfm?key=248"},
+      //  {abbrev: "MIL", name: "Milford", lat: 41.223229872871606, lon: -73.05766582489014, url: "http://as0.mta.info/mnr/stations/station_detail.cfm?key=250"},
+      //  {abbrev: "WH", name: "West Haven", lat: 41.271408, lon: -72.964722, url: "http://as0.mta.info/mnr/stations/station_detail.cfm?key=251"}
+      //]
+
       //
-      // pk.eyJ1IjoiczJ0MiIsImEiOiJEN09jR2JNIn0.D-Q6idg2D7ZtTxkCRvaeGQ
+      // AVAILABLE MAP STYLES (FOR REFERENCE)
       //
+
+      //var mapboxStyles = [
+      //  "mapbox://styles/mapbox/streets-v9",
+      //  "mapbox://styles/mapbox/outdoors-v9",
+      //  "mapbox://styles/mapbox/light-v9",
+      //  "mapbox://styles/mapbox/dark-v9",
+      //  "mapbox://styles/mapbox/satellite-v9",
+      //  "mapbox://styles/mapbox/satellite-streets-v9"
+      //]
 
       mapboxgl.accessToken = 'pk.eyJ1IjoiczJ0MiIsImEiOiJEN09jR2JNIn0.D-Q6idg2D7ZtTxkCRvaeGQ';
 
-      var map = new mapboxgl.Map({
-          container: 'my-map-container',
-          style: 'mapbox://styles/mapbox/streets-v9' // sure this style sounds fine :-)
-      });
+      var mapOptions = {
+        container: 'my-map-container',
+        style: "mapbox://styles/mapbox/streets-v9",
+        center: [-72.92673110961914, 41.29771887088102], // NOTE: this is in the format of [LONG, LAT] (NOT [LAT, LONG])
+        zoom: 8
+      }
 
-
-
+      var map = new mapboxgl.Map(mapOptions)
 
     </script>
   </body>
