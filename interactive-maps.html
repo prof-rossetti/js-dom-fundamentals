@@ -65,7 +65,10 @@
 
       var map = new mapboxgl.Map(mapOptions)
 
-      map.addControl(new mapboxgl.NavigationControl()) // ADD ZOOM CONTROLS TO THE MAP AFTER ITS INSTANTIATED
+
+      var mapControls = new mapboxgl.NavigationControl()
+
+      map.addControl(mapControls, "top-left") // ADD ZOOM CONTROLS TO THE MAP AFTER ITS INSTANTIATED
 
     </script>
   </body>
