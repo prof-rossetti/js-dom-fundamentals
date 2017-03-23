@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Interactive Maps | JavaScript DOM Fundamentals</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
+
   </head>
   <body>
     <h1><a href="index.html">JavaScript DOM Fundamentals</a></h1>
@@ -12,7 +16,25 @@
     <div id="my-map-container" style="width:100%; height:400px;"></div>
 
     <script type="text/javascript">
-      console.log("HELLO")
+
+      // FYI - the docs said something about styles but I couldn't figure it out at a glance, so skipping for now.
+      // it turns out we probably can use some example style
+
+      // MY MAPBOX ACCESS TOKEN (PLEASE USE YOUR OWN!):
+      //
+      // pk.eyJ1IjoiczJ0MiIsImEiOiJEN09jR2JNIn0.D-Q6idg2D7ZtTxkCRvaeGQ
+      //
+
+      mapboxgl.accessToken = 'pk.eyJ1IjoiczJ0MiIsImEiOiJEN09jR2JNIn0.D-Q6idg2D7ZtTxkCRvaeGQ';
+
+      var map = new mapboxgl.Map({
+          container: 'my-map-container',
+          style: 'mapbox://styles/mapbox/streets-v9' // sure this style sounds fine :-)
+      });
+
+
+
+
     </script>
   </body>
 </html>
