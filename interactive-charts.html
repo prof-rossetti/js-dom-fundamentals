@@ -19,23 +19,6 @@
 
     <script type="text/javascript">
 
-      // LISTEN FOR SELECTIONS
-
-      var yearSelector = document.getElementById('year-selector')
-
-      function selectYear() {
-        console.log("SELECTED YEAR:", yearSelector.value)
-        makeMyChart()
-        // we could pass the year into the makeMyChart() function, like makeMyChart(yearSelector.value)
-        // ... but we will instead just invoke the function witout passing a parameter...
-        // ... and we will get the currently selected year from within the makeMyChart() function
-        // ... we could do it either way.
-      }
-
-      yearSelector.addEventListener("change", selectYear, false)
-
-      // MAKE A CHART HERE
-
       var browserShareByYear = {
         "2015": [
           {name: 'Microsoft Internet Explorer', y: 56.33},
@@ -55,6 +38,31 @@
         ]
       }
 
+      //
+      // LISTEN FOR SELECTIONS
+      //
+
+      /*
+      var yearSelector = document.getElementById('year-selector')
+
+      function selectYear() {
+        console.log("SELECTED YEAR:", yearSelector.value)
+        makeMyChart()
+        // we could pass the year into the makeMyChart() function, like makeMyChart(yearSelector.value)
+        // ... but we will instead just invoke the function witout passing a parameter...
+        // ... and we will get the currently selected year from within the makeMyChart() function
+        // ... we could do it either way.
+      }
+
+      yearSelector.addEventListener("change", selectYear, false)
+
+      */
+
+      //
+      // MAKE A CHART HERE
+      //
+
+      /*
       function makeMyChart() {
         var selectedYear = yearSelector.value
 
@@ -97,6 +105,8 @@
       }
 
       makeMyChart()
+
+      */
 
     </script>
   </body>
