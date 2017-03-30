@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fetching Data | JavaScript DOM Fundamentals</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      var myData // store response data here for debugging purposes
+      const url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
+
+      fetch(url)
+        .then(function(response) {
+          console.log("GOT A RESPONSE", response)
+
+          response.json()
+            .then(function(json){
+              console.log("GOT SOME DATA", json)
+              myData = json // pass data into global scope (for debugging purposes)
+
+              // DO SOMETHING WITH THE DATA HERE!
+
+            })
+
+        })
+        .catch(function(err){
+          console.log("GOT AN ERROR", err)
+        })
+
+    </script>
+  </body>
+</html>
