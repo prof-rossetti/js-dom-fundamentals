@@ -2,22 +2,69 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fetching Data | JavaScript DOM Fundamentals</title>
+    <title>Fetching Data (AJAX) | JavaScript DOM Fundamentals</title>
   </head>
   <body>
+    <h1><a href="index.html">JavaScript DOM Fundamentals</a></h1>
+
+    <nav>
+      <ul>
+        <li><a href="page-loading.html">Page-loading Considerations</a></li>
+        <li><a href="selections.html">Selections</a></li>
+        <li><a href="event-listening.html">Event-listening</a></li>
+        <li><a href="dom-manipulation.html">DOM Manipulation</a></li>
+        <li><a href="data-driven-docs.html">Data-driven Documents</a></li>
+        <li><a href="changing-datasets.html">Changing Datasets</a></li>
+        <li><a href="interactive-charts.html">Interactive Charts and Graphs</a></li>
+        <li><a href="interactive-maps.html">Interactive Maps</a></li>
+        <li><a href="fetching-data.html">Fetching Data (AJAX)</a></li>
+      </ul>
+    </nav>
+
+    <h2>Fetching Data (AJAX)</h2>
+
+    <div id="instructions">
+      <h3>Objectives</h3>
+      <p class="lead">Satisfy the following objectives, first using vanilla <code>JavaScript</code>, then using <code>jQuery</code>, then using <code>d3</code>:</p>
+
+      <ol>
+        <li>Fetch data from <a href="https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json">this URL</a> and log the results to the console.</li>
+      </ol>
+    </div>
+
+    <hr>
+    <footer>
+      <p>
+        <a href="https://prof-rossetti.github.io/js-dom-fundamentals/">view</a> |
+        <a href="https://github.com/prof-rossetti/js-dom-fundamentals">source</a>
+      </p>
+    </footer>
+
+    <!-- LOAD JQUERY LIBRARY -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <!-- LOAD D3 LIBRARY -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <script type="text/javascript">
 
-      var myData // store response data here for debugging purposes
+      var myData // optionally store response data here (global scope) for debugging purposes
+      var myResponse // optionally store response data here (global scope) for debugging purposes
       const url = "https://raw.githubusercontent.com/SCSU-CSC-Department/201701-csc-443-01/master/course.json"
 
+      //
+      // Vanilla JavaScript
+      //
+
+      /*
       fetch(url)
         .then(function(response) {
-          console.log("GOT A RESPONSE", response)
+          console.log("GOT A RESPONSE:", response)
+          myResponse = response
 
           response.json()
             .then(function(json){
-              console.log("GOT SOME DATA", json)
+              console.log("GOT SOME DATA:", json)
               myData = json // pass data into global scope (for debugging purposes)
 
               // DO SOMETHING WITH THE DATA HERE!
@@ -28,6 +75,28 @@
         .catch(function(err){
           console.log("GOT AN ERROR", err)
         })
+      */
+
+      //
+      // jQuery
+      //
+
+      /*
+      $.getJSON(url, function(json) {
+        console.log("GOT SOME DATA:", json)
+        // DO SOMETHING WITH THE DATA HERE!
+      });
+      */
+
+      //
+      // D3
+      //
+
+      /*
+      d3.json(url, function(json){
+        console.log("GOT SOME DATA:", json)
+      })
+      */
 
     </script>
   </body>
